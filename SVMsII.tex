@@ -1,0 +1,26 @@
+\section{SVMs}
+\setcounter{problem}{0}
+
+Consider a linear two-class SVM classifier defined by the parameters 
+$w=[3;2]$ and $b=2$. Answer the following questions providing adequate 
+motivations:\bigskip
+
+\Problem{Is the point $x_1=[3;-1]$ classified according to the trained SVM 
+as positive?}\medskip
+
+\Solution{Classifying the point according to sign 
+$f(x)=\mathrm{sign}(\underline{w}^T \phi(x)+b)$, it will be classified as 
+positive only if $w.x+b \geq 1$. Since ${w}^T . x_1 + b = 3\cdot 3 -2 \cdot 1 + 
+2 = 9 \geq 1$, $x_1$ is classified as positive.}\vspace{.4cm}
+
+\Problem{Assume to collect a new sample $x_2=[-2;2]$ with positive label. 
+Do you need to retrain the SVM?}\medskip
+
+\Solution{The sample is located on the straight line, so it is a support 
+vector. It is not necessary to retrain the SVM.}\vspace{.4cm}
+
+\Problem{Does the answer to the previous question apply to a generic new 
+sample?}\medskip
+
+\Solution{No. If a point is misclassified, it is necessary to retrain the model 
+taking into consideration the new training sample collected. }\vspace{.4cm}

@@ -156,115 +156,33 @@
 \begin{document}
 	\thispagestyle{empty}  
 	\noindent{
-		\begin{tabular}{p{15cm}} 
-			{\large \bf Machine Learning} \\
-			Università della Svizzera Italiana \\ Faculty of Informatics \\ 
-			\today  \\
-			\hline
-			\\
-		\end{tabular} 
+	\begin{tabular}{p{15cm}} 
+		{\large \bf Machine Learning} \\
+		Università della Svizzera Italiana \\ Faculty of Informatics \\ 
+		\today  \\
+		\hline
+		\\
+	\end{tabular} 
+	
+	\vspace*{0.3cm} 
+	
+	\begin{center}
+		{\Large \bf Assignment 2: Support Vector Machines}
+		\vspace{2mm}
 		
-		\vspace*{0.3cm} 
+		{\bf Giorgia Adorni 
+		(\href{mailto:giorgia.adorni@usi.ch}{giorgia.adorni@usi.ch})}
 		
-		\begin{center}
-			{\Large \bf Assignment 2: Support Vector Machines}
-			\vspace{2mm}
-			
-			{\bf Giorgia Adorni 
-			(\href{mailto:giorgia.adorni@usi.ch}{giorgia.adorni@usi.ch})}
-			
-		\end{center}  
+	\end{center}  
 	}
 	\vspace{0.4cm}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	\section{Kernels I}
-	Consider $\mathbf{x}$, $\mathbf{y} \in \mathbb{R}^d$, $d \in \mathbb{N}$. 
-	Explain in detail why each of the following functions is or is not a valid 
-	kernel:\bigskip
-	
-	\Problem{$K(x,y)=x^Ty+(x^Ty)^2$}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{$K(x,y)=x^2e^{-y}$, $d=1$}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{$K(x,y)=ck_1(x,y)+k_2(x,y)$, where $k_1(x,y)$, $k_2(x,y)$ are 
-		valid kernels in $\mathbb{R}^d$}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-
-	\section{Kernels II}
-	Explain in each case if you would apply the kernel trick to represent your 
-	data. Which kind of kernel would you use? Why? If relying on kernels is not 
-	a good choice, which other transformation would you use?
-	\begin{itemize}
-		\item[(a)] ciao 
-		\item[(b)] ciao 
-		\item[(c)] ciao 
-		\item[(d)] ciao
-	\end{itemize}
-	
-	\section{SVMs}
-	\setcounter{problem}{0}
-	
-	\Problem{Suppose you have 2D examples: is the decision boundary of an SVM 
-	with linear kernel a straight line?}\medskip
-		
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{Suppose that the input data are linearly separable. Will an SVM 
-	with linear kernel return the same parameters w regardless of the chosen 
-	regularization value C? Why?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{Suppose you have 3D input examples $(x_i \in \mathbb{R}^3)$. What 
-	is the dimension of the decision boundary of the SVM with linear 
-	kernel?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{Is the computational effort for solving a kernel SVM increasing as 
-	the dimension of the basis functions increases? Why?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{What is the maximum value of the Gaussian Kernel?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{If data are noisy and no linear boundary can perfectly classify 
-	all the training data, this means we need to use a feature expansion. True 
-	or false?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-		
-	\section{SVMs}
-	\setcounter{problem}{0}
-	Consider a linear two-class SVM classifier defined by the parameters 
-	$w=[3:2]$ and $b=2$. Answer the following questions providing adequate 
-	motivations:\bigskip
-	
-	\Problem{Is the point $x_1=[3:-1]$ classified according to the trained SVM 
-	as positive?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{Assume to collect a new sample $x_1=[3:-1]$ with positive label. 
-	Do you need to retrain the SVM?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-	
-	\Problem{Does the answer to the previous question apply to a generic new 
-	sample?}\medskip
-	
-	\Solution{	}\vspace{.4cm}
-			
+	\input{KernelsI}
+	\input{KernelII}
+	\input{SVMsI}
+	\input{SVMsII}
 
 \end{document}
