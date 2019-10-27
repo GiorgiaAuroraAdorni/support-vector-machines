@@ -7,30 +7,31 @@ kernel:\bigskip
 \Problem{$K(x,y)=x^Ty+(x^Ty)^2$}\medskip
 
 \Solution{
-First of all, expanding the term raised to power, it is obtained the expression 
-$K(x,y)=x^Ty+(x^Ty)(x^Ty)$. $K(x,y)=x^Ty$ is a linear kernel, so it is valid. 
-Using this knowledge,
-\begin{equation*}
-K(x,y)=x^Ty+(x^Ty)(x^Ty)=K_1(x, y)+K_2(x,y)\times K_3(x,y) \mbox{.}
-\end{equation*}
-Since the sum and the multiplication of two valid kernels produce a valid 
-kernel, taking advantage of this two rules: \begin{itemize}
+Taking advantage of this two rules:
+\begin{enumerate}
+	\item $K(x,y)=q (K_1(x,y))$ where $q$ is a polynomial with 
+	non-negative coefficient,
 	\item $K(x,y)=K_1(x,y)+K_2(x,y)$
-	\item $K(x,y)=K_1(x,y)\times K_2(x,y)$,
-\end{itemize} 
-so it is proved that the following is a valid kernel 
-\begin{align*}
-	K(x,y) & =x^Ty+(x^Ty)(x^Ty)=K_1(x^T, y)+K_2(x^T,y)\times K_3(x^T,y)= \\
-	& = K_1(x^T,y)+K_4(x^T,y)=K_5(x^T,y)=x^Ty
-\end{align*}
-}
+\end{enumerate} 	
+that are the sum and the polynomial of two valid kernels produce a valid kernel,
+it is proved that the following is a valid kernel
+\begin{equation}
+K(x,y) = x^Ty+(x^Ty)^2 \stackrel{1}{=} K_1(x, y) + q (K_2(x,y)) 
+\stackrel{2}{=} K_3(x,y)=x^Ty 
+\mbox{.}
+\end{equation}
+
+$K(x,y)=x^Ty$ is a linear kernel, so it is valid.
+}\vspace{.5cm}
 
 \Problem{$K(x,y)=x^2e^{-y}$, $d=1$}\medskip
 
 \Solution{
 %FIXME
 As in the previous exercise, the term raised to power can be write as 
-$x^2=x\times x$. In this case $K(x,x)=x x$ is a linear kernel, so it is valid. 
+$x^2=x\times x$. \textbf{FIXME} In this case $K(x,x)=x x$ is a linear kernel, 
+so it is valid. 
+Using this knowledge,
 But $e^{-y}=e^{-1}e^y$ it is not symmetric, so we cannot prove that 
 $K(x,y)=x^2e^{-y}$ is 
 a valid kernel.
@@ -43,14 +44,15 @@ a valid kernel.
 It is already known that $k_1(x,y)$ and $k_2(x,y)$ are valid kernels.
 Since multiplying a valid kernel for a constant it remains a valid kernel, and 
 since the sum of two valid kernels produce a valid kernel, taking advantage of 
-this two rules: \begin{itemize}
+this two rules: 
+\begin{enumerate}
 	\item $K(x,y)=c \times K_1(x,y) \quad \mathrm{ with } \: c > 0 \: \mathrm{ 
-	constant }$
-	\item $K(x,y)=K_1(x,y)+K_2(x,y)$,
-\end{itemize} 
+	constant }$,
+	\item $K(x,y)=K_1(x,y)+K_2(x,y)$
+\end{enumerate} 
 so it is proved that, only if the constant is positive, the following is a 
 valid kernel 
-\begin{equation*}
-K(x,y)=c \, K_1(x,y) + K_2(x,y)= K_3(x,y) + K_2(x,y)= K_4(x,y)
-\end{equation*}
+\begin{equation}
+K(x,y) \stackrel{1}{=} c \, K_1(x,y) + K_2(x,y)\stackrel{2}{=} K_3(x,y)=xy
+\end{equation}
 }
