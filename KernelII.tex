@@ -5,18 +5,27 @@ data. Which kind of kernel would you use? Why? If relying on kernels is not
 a good choice, which other transformation would you use?
 \begin{itemize}
 	\item[(a)] In this case I would apply the kernel trick because the data are 
-	linearly non-separable. %FIXME
-	A Gaussian kernel or a Radial Basis Function could be suitable choices for 
-	the data(?).
-	\item[(b)] In this case I would apply the kernel trick because the data are 
-	not linearly separable.  
-	radius of a circle centred in $(0, 0)$
+	not	linearly separable. %FIXME
+	A suitable choices for the data could be the Gaussian kernel or the Radial 
+	Basis Function.
+	
+	\item[(b)] Also in this case I would apply the kernel trick because the 
+	data are not linearly separable. 
+	In this case it is possible to use a polynomial kernel that consider the 
+	squared distance from the centre in $(0, 0)$, for example the map 
+	$\phi(x)=[x_1, x_2, {\left\| x\right\|}^{2}]$. In the feature space the 
+	classes become linearly separable and in the original space the decision 
+	boundary becomes a circle.
+	
 	\item[(c)] In this case, the points are linearly separable, so it is not 
 	necessary to apply the kernel trick.  
+	
 	\item[(d)] In this case I would apply the kernel trick because the data 
-	are linearly non-separable. Moreover, relying on kernels is not 
-	a good choice in this case, \\
+	are linearly non-separable. Contrary to previous cases, relying on kernels 
+	is not a good choice in this case, \\ \textbf{FIXME}
 	\href{https://www.researchgate.net/publication/309545761\_A\_Structure- 
 	Adaptive\_Hybrid\_RBF-BP\_Classifier\_with\_an\_Optimized\_Learning\_Strategy}{Adaptive
 	 Hybrid RBF-BP Classifier with an Optimized Learning Strategy}
 \end{itemize}
+In the cases (a), (b) and (d), VC-dimension can be used in Structural Risk 
+Minimization for choosing the kind of kernel.
