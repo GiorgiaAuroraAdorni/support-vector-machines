@@ -9,18 +9,23 @@ motivations:\bigskip
 as positive?}\medskip
 
 \Solution{Classifying the point according to sign 
-$f(x)=\mathrm{sign}(\underline{w}^T \phi(x)+b)$, it will be classified as 
-positive only if $w.x+b \geq 1$. Since ${w}^T . x_1 + b = 3\cdot 3 -2 \cdot 1 + 
-2 = 9 \geq 1$, $x_1$ is classified as positive.}\vspace{.4cm}
+$f(\underline{x})=\mathrm{sign}(\underline{w}^T \underline{x} + b)$, it will be 
+classified as 
+positive only if $\underline{w}^T \underline{x} + b\geq 1$. Since 
+$\underline{w}^T \underline{x_1}+ b = 3\cdot 3 -2 \cdot 1 + 
+2 = 9 \geq 1$, $\underline{x_1}$ is classified as positive.}\vspace{.4cm}
 
 \Problem{Assume to collect a new sample $x_2=[-2;2]$ with positive label. 
 Do you need to retrain the SVM?}\medskip
 
-\Solution{The sample is located on the straight line, so it is a support 
-vector. It is not necessary to retrain the SVM.}\vspace{.4cm}
+\Solution{The sample lie on the hyperplane since
+$\underline{w}^T \underline{x_2}+ b = 3\cdot (-2)+ 2 \cdot 2 + 2 = 0$.
+In this case it is necessary to retrain the SVM to find another hyperplanes the 
+correctly classified this data-point.}\vspace{.4cm}
 
 \Problem{Does the answer to the previous question apply to a generic new 
 sample?}\medskip
 
 \Solution{No. If a point is misclassified, it is necessary to retrain the model 
-taking into consideration the new training sample collected. }\vspace{.4cm}
+taking into consideration the new training sample collected. The model is not 
+influence by non-support-vector data-points.}\vspace{.4cm}
