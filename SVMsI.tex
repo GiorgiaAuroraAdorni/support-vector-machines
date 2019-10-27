@@ -6,19 +6,22 @@ with linear kernel a straight line?}\medskip
 
 %FIXME	
 \Solution{
-The classic linear kernel assumes that the different classes are separated by a 
-straight line.
-The boundary is the same one a perceptron would produce, thus it is linear in 
-the feature space.
+The linear kernel assumes that the different classes are separated by a 
+straight line, so the boundary is linear  in the . il decision boundary è un 
+iperpiano nel feature space. in questo caso il feature space corrisponde allo 
+spazio originale dei dati, quindi il decision boundary è una linea.
 }\vspace{.4cm}
 
 \Problem{Suppose that the input data are linearly separable. Will an SVM 
 with linear kernel return the same parameters $w$ regardless of the chosen 
 regularization value C? Why?}\medskip
 
-\Solution{
+\Solution{%FIXME
 If the data are linearly separable, an SVM using a linear kernel will return the
-same parameters w regardless of the chosen value of C.
+same parameters w regardless of the chosen value of C. perche a prescindere dal 
+valore di C, se esiste un iperpiano w in cui gli $\epsilon_i$ sono tutti 0 
+questo sarà 
+migliore degli altri
 }\vspace{.4cm}
 
 \Problem{Suppose you have 3D input examples $(x_i \in \mathbb{R}^3)$. What 
@@ -31,15 +34,19 @@ kernel?}\medskip
 the dimension of the basis functions increases? Why?}\medskip
 
 \Solution{
-No, thanks to the "kernel trick" even if there is an infinite-dimensional 
-basis, we need the $N^2$ inner products between training data points. The 
-computational cost might increase if the computation of the inner products is 
-costly.
+No, thanks to the ``kernel trick'' even if there is an infinite-dimensional 
+basis, we need to compute only the kernel, which only has a low dimension. 
+
+%The computational cost might increase if the computation of the inner products 
+%is costly.
 }\vspace{.4cm}
 
 \Problem{What is the maximum value of the Gaussian Kernel?}\medskip
 
-\Solution{The maximum value of the Gaussian kernel is 1.}\vspace{.4cm}
+\Solution{Since the Gaussian kernel corresponds to $\exp \{ - \frac{\| x - 
+x'\|^2}{2 \sigma ^2} \}$, so an exponential with a negative argument, the 
+function decreases, so the maximum value is located on the '' axis and it is 
+1.}\vspace{.4cm}
 
 \Problem{If data are noisy and no linear boundary can perfectly classify 
 all the training data, this means we need to use a feature expansion. True 
