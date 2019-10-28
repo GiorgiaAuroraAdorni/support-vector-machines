@@ -16,19 +16,20 @@ spazio originale dei dati, quindi il decision boundary è una linea.
 with linear kernel return the same parameters $w$ regardless of the chosen 
 regularization value C? Why?}\medskip
 
-\Solution{%FIXME
-If the data are linearly separable, an SVM using a linear kernel will return the
-same parameters w regardless of the chosen value of C. perche a prescindere dal 
-valore di C, se esiste un iperpiano w in cui gli $\epsilon_i$ sono tutti 0 
-questo sarà 
-migliore degli altri
+\Solution{
+Even if the data are linearly separable, a Soft Margin SVM using a linear 
+kernel could not return the same parameters $w$ regardless of the chosen value 
+of $C$. In fact, reducing the values of $C$, the margin increases and some 
+training points close to the margin can be misclassified.
 }\vspace{.4cm}
 
 \Problem{Suppose you have 3D input examples $(x_i \in \mathbb{R}^3)$. What 
 is the dimension of the decision boundary of the SVM with linear 
 kernel?}\medskip
 
-\Solution{	}\vspace{.4cm}
+\Solution{\textbf{FIXME}Since we are in a 3D space, the decision boundary 
+should be a 2d 
+plane. }\vspace{.4cm}
 
 \Problem{Is the computational effort for solving a kernel SVM increasing as 
 the dimension of the basis functions increases? Why?}\medskip
@@ -44,8 +45,8 @@ basis, we need to compute only the kernel, which only has a low dimension.
 \Problem{What is the maximum value of the Gaussian Kernel?}\medskip
 
 \Solution{Since the Gaussian kernel corresponds to $\exp \{ - \frac{\| x - 
-x'\|^2}{2 \sigma ^2} \}$, so an exponential with a negative argument, the 
-function decreases, so the maximum value is located on the '' axis and it is 
+x'\|^2}{2 \sigma ^2} \}$, that is an exponential with a negative argument, 
+since the function decreases, the maximum value occurs when $x=0$, and it is 
 1.}\vspace{.4cm}
 
 \Problem{If data are noisy and no linear boundary can perfectly classify 
@@ -53,6 +54,7 @@ all the training data, this means we need to use a feature expansion. True
 or false?}\medskip
 
 \Solution{
+	\textbf{FIXME}
 FALSE As in any statistical problem, we will always do better on the training 
 data if we use a feature expansion, but that does not mean we will improve the 
 test error. Not all regression lines should perfectly interpolate all the 

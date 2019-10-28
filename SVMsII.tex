@@ -20,12 +20,14 @@ Do you need to retrain the SVM?}\medskip
 
 \Solution{The sample lie on the hyperplane since
 $\underline{w}^T \underline{x_2}+ b = 3\cdot (-2)+ 2 \cdot 2 + 2 = 0$.
-In this case it is necessary to retrain the SVM to find another hyperplanes the 
-correctly classified this data-point.}\vspace{.4cm}
+In this case it is necessary to retrain the SVM to find another hyperplanes 
+that correctly classified this data-point.}\vspace{.4cm}
 
 \Problem{Does the answer to the previous question apply to a generic new 
 sample?}\medskip
 
-\Solution{No. If a point is misclassified, it is necessary to retrain the model 
-taking into consideration the new training sample collected. The model is not 
-influence by non-support-vector data-points.}\vspace{.4cm}
+\Solution{No. If a point is correctly classified it is not necessary since this 
+sample do not influence the model. However, if it is misclassified or a 
+support-vector (whether it is on the hyperplane or within the margin), it is 
+necessary to retrain the model taking into consideration the new training 
+sample collected.}\vspace{.4cm}

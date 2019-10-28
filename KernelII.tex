@@ -7,12 +7,11 @@ a good choice, which other transformation would you use?
 	\item[(a)] In this case I would apply the kernel trick because the data are 
 	not	linearly separable. %FIXME
 	A suitable choices for the data could be the Gaussian kernel or the Radial 
-	Basis Function.
+	Basis Function, that generates the desired decision boundary.\textbf{FIXME}
 	
-	\item[(b)] Also in this case I would apply the kernel trick because the 
-	data are not linearly separable. 
-	In this case it is possible to use a polynomial kernel that consider the 
-	squared distance from the centre in $(0, 0)$, for example the map 
+	\item[(b)] In this case, despite the data are not linearly separable, it is 
+	not necessary to apply the kernel trick. Instead of using a polynomial  
+	kernel, a simpler solution consists in the direct application of the map 
 	$\phi(x)=[x_1, x_2, {\left\| x\right\|}^{2}]$. In the feature space the 
 	classes become linearly separable and in the original space the decision 
 	boundary becomes a circle.
@@ -21,11 +20,9 @@ a good choice, which other transformation would you use?
 	necessary to apply the kernel trick.  
 	
 	\item[(d)] In this case I would apply the kernel trick because the data 
-	are linearly non-separable. Contrary to previous cases, relying on kernels 
-	is not a good choice in this case, \\ \textbf{FIXME}
-	\href{https://www.researchgate.net/publication/309545761\_A\_Structure- 
-	Adaptive\_Hybrid\_RBF-BP\_Classifier\_with\_an\_Optimized\_Learning\_Strategy}{Adaptive
-	 Hybrid RBF-BP Classifier with an Optimized Learning Strategy}
+	are linearly non-separable. A suitable kind of kernel could be the 
+	Gaussian, that kernel of degree $3$.\textbf{FIXME}
+	
 \end{itemize}
 In the cases (a), (b) and (d), VC-dimension can be used in Structural Risk 
 Minimization for choosing the kind of kernel.
