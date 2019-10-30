@@ -27,9 +27,8 @@ training points close to the margin can be misclassified.
 is the dimension of the decision boundary of the SVM with linear 
 kernel?}\medskip
 
-\Solution{\textbf{FIXME}Since we are in a 3D space, the decision boundary 
-should be a 2d 
-plane. }\vspace{.4cm}
+\Solution{Since we are in a 3D space, the decision boundary 
+should be a 2D hyper-plane.}\vspace{.4cm}
 
 \Problem{Is the computational effort for solving a kernel SVM increasing as 
 the dimension of the basis functions increases? Why?}\medskip
@@ -54,10 +53,8 @@ all the training data, this means we need to use a feature expansion. True
 or false?}\medskip
 
 \Solution{
-	\textbf{FIXME}
-FALSE As in any statistical problem, we will always do better on the training 
-data if we use a feature expansion, but that does not mean we will improve the 
-test error. Not all regression lines should perfectly interpolate all the 
-training points, and not all classifiers should perfectly classify all the 
-training data
-}\vspace{.4cm}
+False. It is always possible to linearly separate the data using a feature 
+expansion, for example mapping them in a n-dimensional space where n is the 
+number of data-points. However, it isn't a good idea trying to separate all the 
+data-points because this can cause overfitting and does not improve the 
+test error.}\vspace{.4cm}

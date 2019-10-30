@@ -27,14 +27,10 @@ $K(x,y)=x^Ty$ is a linear kernel, so it is valid.
 \Problem{$K(x,y)=x^2e^{-y}$, $d=1$}\medskip
 
 \Solution{
-%FIXME
-As in the previous exercise, the term raised to power can be write as 
-$x^2=x\times x$. \textbf{FIXME} In this case $K(x,x)=x x$ is a linear kernel, 
-so it is valid. 
-Using this knowledge,
-But $e^{-y}=e^{-1}e^y$ it is not symmetric, so we cannot prove that 
-$K(x,y)=x^2e^{-y}$ is 
-a valid kernel.
+In this case, can be proofed that the expression $x^2e^{-y}$ is not symmetric.  
+In fact, since $d=1$, $x$ and $y$ are scalars. So, choosing two integers, for 
+example $x=1$ and $y=0$, we obtain that $x^2e^{-y}=1e^0=1 \neq y^2e^{-x}=0$, so 
+$K(x,y)=x^2e^{-y}$ cannot be a valid kernel.
 }\vspace{.5cm}
 
 \Problem{$K(x,y)=ck_1(x,y)+k_2(x,y)$, where $k_1(x,y)$, $k_2(x,y)$ are 
