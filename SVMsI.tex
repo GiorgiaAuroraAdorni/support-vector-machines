@@ -3,13 +3,12 @@
 	
 \Problem{Suppose you have 2D examples: is the decision boundary of an SVM 
 with linear kernel a straight line?}\medskip
-
-%FIXME	
+	
 \Solution{
-The linear kernel assumes that the different classes are separated by a 
-straight line, so the boundary is linear  in the . il decision boundary è un 
-iperpiano nel feature space. in questo caso il feature space corrisponde allo 
-spazio originale dei dati, quindi il decision boundary è una linea.
+Yes, the decision boundary of an SVM with a linear kernel is a hyperplane in 
+the feature space. Since the feature space and the original space 
+of the data are equivalent, in this case, the decision boundary is a straight 
+line.
 }\vspace{.4cm}
 
 \Problem{Suppose that the input data are linearly separable. Will an SVM 
@@ -17,18 +16,18 @@ with linear kernel return the same parameters $w$ regardless of the chosen
 regularization value C? Why?}\medskip
 
 \Solution{
-Even if the data are linearly separable, a Soft Margin SVM using a linear 
-kernel could not return the same parameters $w$ regardless of the chosen value 
-of $C$. In fact, reducing the values of $C$, the margin increases and some 
-training points close to the margin can be misclassified.
+Even if the data are linearly separable, an SVM using a linear kernel could not 
+return the same parameters $w$ regardless of the chosen value of $C$. In fact, 
+reducing the values of $C$, the margin width increases at the expense of 
+misclassifying some training points close to the margin.
 }\vspace{.4cm}
 
 \Problem{Suppose you have 3D input examples $(x_i \in \mathbb{R}^3)$. What 
-is the dimension of the decision boundary of the SVM with linear 
+is the dimension of the decision boundary of the SVM with a linear 
 kernel?}\medskip
 
-\Solution{Since we are in a 3D space, the decision boundary 
-should be a 2D hyper-plane.}\vspace{.4cm}
+\Solution{Since we are in a 3D space, the decision boundary either is a 2D 
+hyperplane.}\vspace{.4cm}
 
 \Problem{Is the computational effort for solving a kernel SVM increasing as 
 the dimension of the basis functions increases? Why?}\medskip
@@ -43,10 +42,10 @@ basis, we need to compute only the kernel, which only has a low dimension.
 
 \Problem{What is the maximum value of the Gaussian Kernel?}\medskip
 
-\Solution{Since the Gaussian kernel corresponds to $\exp \{ - \frac{\| x - 
-x'\|^2}{2 \sigma ^2} \}$, that is an exponential with a negative argument, 
-since the function decreases, the maximum value occurs when $x=0$, and it is 
-1.}\vspace{.4cm}
+\Solution{Since the Gaussian kernel is an exponential with a negative argument, 
+since the function decreases, the maximum value occurs when the argument of the 
+exponential is $0$. This happens when $x=y$, so the maximum value is $1$.} 
+\vspace{.4cm}
 
 \Problem{If data are noisy and no linear boundary can perfectly classify 
 all the training data, this means we need to use a feature expansion. True 
@@ -54,7 +53,7 @@ or false?}\medskip
 
 \Solution{
 False. It is always possible to linearly separate the data using a feature 
-expansion, for example mapping them in a n-dimensional space where n is the 
+expansion, for example mapping them in an n-dimensional space where n is the 
 number of data-points. However, it isn't a good idea trying to separate all the 
 data-points because this can cause overfitting and does not improve the 
 test error.}\vspace{.4cm}

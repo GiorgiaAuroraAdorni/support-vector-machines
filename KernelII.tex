@@ -6,28 +6,26 @@ a good choice, which other transformation would you use?
 \begin{itemize}
 	\item[(a)] In this case, I would apply the kernel trick because the data 
 	are not	linearly separable.
-	A suitable choice for the data could be the Gaussian kernel that generates  
-	an appropriate decision boundary.
+	A suitable choice for the data could be the Gaussian kernel that is often 
+	used with a globular shape of data.
 	
 	\item[(b)] In this case, despite the data are not linearly separable, it is 
 	not necessary to apply the kernel trick. In fact, a simple radial 
 	transformation mapping, based on the distance from the centre, should be 
 	enough. 
-	For example, a simpler solution consists in the direct application of the 
-	map $\phi(x)=[x_1, x_2, {\left\| x\right\|}^{2}]$. In the feature space the 
-	classes become linearly separable and in the original space the decision 
+	For example, a simpler solution consists of the direct application of the 
+	map $\phi(x)=[{\left\| x\right\|}^{2}]$. In the feature space, the 
+	classes become linearly separable and in the original space, the decision 
 	boundary becomes a circle.
-	Alternatively, use an higher dimensional space, for example relying 
-	on a polynomial of degree two or a Gaussian kernel, is not recommended 
-	because of the complexity of the model.
+	%Alternatively, using an higher dimensional space, for example relying on a 
+	%polynomial of degree two or a Gaussian kernel, is not recommended because 
+	%of the complexity of the model.
 
 	\item[(c)] In this case, the points are linearly separable, so it is not 
 	necessary to apply the kernel trick.  
 	
-	\item[(d)] In this case I would apply the kernel trick because the data 
-	are linearly non-separable. A suitable kind of kernel could be the 
-	application of a mixture of Gaussian, that are a suitable choice in case of 
-	globular shape of data. Also a polynomial of degree $6$ should be 
-	enough.
+	\item[(d)] In this case, I would apply the kernel trick because the data 
+	are linearly non-separable. A polynomial of degree $6$ can separate the 
+	classes.
 	
 \end{itemize}
